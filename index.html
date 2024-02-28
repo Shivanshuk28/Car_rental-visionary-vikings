@@ -4,31 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Background Video Example</title>
-<style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-    }
-    #video-background {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: -1;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <video id="video-background" autoplay muted >
-        <source src="firstvideo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        <source src="previewvideo.mp4" type="video/mp4">
     </video>
-
     <script>
         var video = document.getElementById("video-background");
         video.addEventListener("ended", function() {
