@@ -1,11 +1,287 @@
-body {
+/* ABHAVYA CSSS */
+
+/* style.css */
+.hi {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('path/to/default_image.jpg');
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+}
+
+#nav-bar {
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    border-bottom: 2px solid white;
+    color: white;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: background-color 5s ease-in-out;
+    display: flex;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    gap: 180px;
+    /* justify-content: center; */
+}
+
+.logo img {
+    height: 45px;
+    width: 150px;
+}
+
+.nav-items {
+    justify-content: center;
+}
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    color: black;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    /* background-color:white; */
+    color: maroon;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+}
+
+.search-container img {
+    height: 38px;
+    width: 38px;
+}
+
+.search-container input[type=text] {
+    height: 30px;
+}
+
+.cart img {
+    height: 38px;
+    width: 38px;
+}
+
+.login-button button {
+    height: 38px;
+    width: 150px;
+}
+
+#content {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    gap: 370px;
+}
+
+.inner-left {
+    margin-top: 180px;
+    margin-left: 150px;
+    width: 400px;
+}
+
+.new {
+    color: white;
+    font-size: 15px;
+}
+
+.book-line {
+    color: white;
+    font-size: 50px;
+    width: 400px;
+    font-weight: 200px;
+}
+
+.discover-buttons button {
+    background-color: white;
+    border: none;
+    height: 50px;
+    width: 120px;
+}
+
+.inner-right {
+    margin-top: 150px;
+    margin-right: 150px;
+    border: 1px solid white;
+    height: 280px;
+    width: 350px;
+    padding-top: 25px;
+    padding-left: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    justify-content: center;
+}
+
+.inner-right label {
+    font-size: 30px;
+}
+
+.cal {
+    height: 40px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#submit-btn {
+    height: 40px;
+    width: 300px;
+    background-color: rgb(156, 15, 54);
+    border: none;
+    color: white;
+}
+
+#submissionMessage {
+    height: 200px;
+    width: 350px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#submissionMessage p {
+    margin-top: 160px;
+    font-size: 35px;
+}
+
+#main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: background-image 5s ease-in-out;
+    background-image: url('default_image.jpg');
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+}
+
+/* Styles for the popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    ;
+    width: 50%;
+    height: 50%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    /* Ensure the popup appears on top of other content */
+    display: none;
+    /* Initially hidden */
+}
+
+/* Styles for the overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black overlay */
+    z-index: 9998;
+    /* Ensure the overlay appears below the popup */
+    display: none;
+    /* Initially hidden */
+}
+
+
+.form-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide the sign up form by default */
+#signupForm {
+    display: none;
+}
+
+/* Styles for the tabs (Login/Sign Up links) */
+.tab {
+    cursor: pointer;
+}
+
+/* Styles for active tab */
+.active {
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* SHIVANSHU CSS */
+
+
+
+
+
+#boddy {
     background-color: rgb(41, 38, 38);
 }
 
 
 /* .hr{
-    
-} */
+        
+    } */
 hr {
     width: 100%;
     /* You can adjust the percentage or use pixels, em, etc. */
@@ -50,14 +326,6 @@ section {
     padding: 50px 100px;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-}
-
 
 .services-container {
     display: grid;
@@ -77,7 +345,11 @@ header {
 .services-container .box .box-img {
     width: 100%;
     height: 200px;
+    /* overflow: hidden; */
 }
+
+
+
 
 
 .services-container .box .box-img img {
@@ -86,6 +358,12 @@ header {
     border-radius: 1rem;
     object-fit: cover;
     object-position: center;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.services-container .box .box-img img:hover{
+    transform: scale(1.06);
 }
 
 .services-container .box p {
@@ -131,7 +409,6 @@ header {
 
 
 
-
 /* CHECKOUT STYLING STARTS */
 
 
@@ -142,25 +419,41 @@ header {
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* body {
-    background-color: rgb(113, 110, 110);
-    
-}    */
-.checkout_heading{
+        background-color: rgb(113, 110, 110);
+        
+    }    */
+.checkout-title {
+    display: flex;
     background-color: rgba(139, 116, 116, 0.5);
     font-size: 44px;
     text-align: center;
-    color: #240404; 
-    margin-bottom: 10px; 
+    color: #240404;
+    margin-bottom: 10px;
     width: 100%;
-    text-transform: uppercase; /* Convert text to uppercase for a stylish look */
-    font-family: "Lobster", sans-serif; /* Choose a suitable font family */
-    letter-spacing: 2px; /* Add letter spacing for better readability */
-    font-weight: bold; /* Emphasize the heading with bold text */
+    text-transform: uppercase;
+    /* Convert text to uppercase for a stylish look */
+    font-family: "Lobster", sans-serif;
+    /* Choose a suitable font family */
+    letter-spacing: 2px;
+    /* Add letter spacing for better readability */
+    font-weight: bold;
+    /* Emphasize the heading with bold text */
 }
+.back-button{
+    width: 20%;
+    align-self: flex-start;
+}
+.checkout check-heading{
+    width: 80%;
+    align-self: center; 
+}
+
 @media (max-width: 600px) {
     .heading {
-        font-size: 30px; /* Adjust the font size for smaller screens */
+        font-size: 30px;
+        /* Adjust the font size for smaller screens */
     }
 }
 
@@ -181,13 +474,15 @@ hr {
 /* VISA CARD AND OTHER PART STYLING */
 
 #checkoutPage {
+    background-color: rgb(41, 38, 38);
     position: relative;
     font-family: 'Work Sans', sans-serif;
 }
-.container{
+
+.container {
     position: absolute;
-    right:80px;
-    left:50%;
+    right: 80px;
+    left: 50%;
 
 }
 
@@ -259,11 +554,11 @@ input:focus {
 /* LEFT IMAGE*/
 .left_image {
     width: 50%;
-    float: left; 
+    float: left;
 }
 
 #carImage img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
 }
 
@@ -286,9 +581,11 @@ input:focus {
     width: 50%;
     float: left;
 }
+
 #carModel {
     color: #d53a3a;
 }
+
 #carPrice {
     color: #d53a3a;
 }
