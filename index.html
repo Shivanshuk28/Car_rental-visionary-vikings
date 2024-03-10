@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Background Video Example</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video Example</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <video id="video-background" autoplay muted >
+    <video id="video-background" autoplay muted>
         <source src="previewvideo.mp4" type="video/mp4">
     </video>
-    <script>
-        var video = document.getElementById("video-background");
-        video.addEventListener("ended", function() {
-            window.location.href = "newpage.html";
-        });
-    </script>
+        <script>
+            var video = document.getElementById("video-background");
+            video.addEventListener("ended", function () {
+                window.location.href = "homepage.html";
+            });
+        </script>
 </body>
+
 </html>

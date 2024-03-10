@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body> 
+    <div id="main">
+        <div id="nav-bar">  
+            
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+
+            <!-- Dropdowns -->
+            <div class="nav-items">
+
+                <div class="dropdown">
+                    <button class="dropbtn">Explore</button>
+                    <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    </div>
+                </div>
+                
+                <!-- <div class="dropdown">
+                    <button class="dropbtn">Search</button>
+                    <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    </div>
+                </div> -->
+    
+                <div class="dropdown">
+                    <button class="dropbtn">About</button>
+                    <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Feedback</button>
+                    <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Previous Rides</button>
+                    <!-- <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    </div> -->
+                </div>
+            </div>
+        
+            <!-- Right Options-->
+            <div class="options">
+
+
+                <div class="search-container">
+                    <form action="/action_page.php">
+                      <input type="text" placeholder="Search.." name="search">
+                      <img src="search.svg" alt="">
+                    </form>
+                  </div>
+
+                <div class="cart">
+                    <img src="cart.svg" alt="">
+                </div>
+
+                <div class="login-button">
+                    <button onclick="openPopup()">Login</button>
+                </div>
+
+            </div>
+            
+        </div>
+
+        
+        
+        <div id="content">
+            <div class="inner-left">
+                <div class="new">
+                    <p>NEW IN STOCK</p>
+                </div>
+                <div class="book-line">
+                    <b><p>Book your drive now!</p></b>
+                    
+                </div>
+                <div class="discover-buttons">
+                    <button>Discover Now</button>
+                </div>
+            </div>
+            
+            <div class="inner-right">
+                <form id="rideForm">
+                    <h1>Find Your Ride</h1>
+                    <label for="brand">Brand</label><br>
+                    <select id="brand" name="brand">
+                        <option value="">Brand</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="honda">Honda</option>
+                        <option value="ford">Ford</option>
+                    </select>
+                    <br><br>
+                    <label for="model">Model</label><br>
+                    <select id="model" name="model">
+                        <option value="">Model</option>
+                        <option value="">Model1</option>
+                        <option value="">Model2</option>
+                        <option value="">Model3</option>
+                    </select>
+                    <br><br>
+                    <label for="type">Type</label><br>
+                    <select id="type" name="type">
+                        <option value="">Type</option>
+                        <option value="">Type1</option>
+                        <option value="">Type2</option>
+                        <option value="">Type3</option>
+                    </select>
+                    <br><br>
+                    <button type="submit" onclick="submitForm(event)">Get Started</button>
+                </form>
+                <div id="submissionMessage" style="display: none;"><p>Your response has been recorded!</p></div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- Pop up Login page div-->
+    <div id="popup" class="popup">
+        <div class="form-container" id="loginForm">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <button type="submit">Login</button>
+            </form>
+            <p class="tab" onclick="toggleForm('signup')">Sign Up</p>
+        </div>
+        
+        <div class="form-container" id="signupForm">
+            <h2>Sign Up</h2>
+            <form>
+                <label for="newUsername">New Username:</label><br>
+                <input type="text" id="newUsername" name="newUsername"><br><br>
+                <label for="newPassword">New Password:</label><br>
+                <input type="password" id="newPassword" name="newPassword"><br><br>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p class="tab" onclick="toggleForm('login')">Login</p>
+        </div>
+        <button onclick="closePopup()">Close</button>
+    </div>
+    <!-- Overlay -->
+<div id="overlay" class="overlay"></div>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -14,3 +14,459 @@ body, html {
     bottom: 0;
     z-index: -1;
 }
+
+.dropbtn:hover
+{
+  color: brown;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  }
+  
+  #main {
+    position: relative;
+    width: 100vw;
+    height: 100vh; 
+    overflow: hidden; 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-image: url('path/to/default_image.jpg');
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+  }
+  
+  #nav-bar {
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    border-bottom: 2px solid white;
+    color: white; 
+    padding: 1rem;
+    box-sizing: border-box; 
+    transition: background-color 5s ease-in-out; 
+    display: flex;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    gap:220px;
+    /* justify-content: center; */
+  }
+  .logo img{
+    height: 50px;
+    width: 150px ;
+  }
+  .nav-items{
+    justify-content: center;
+  }
+
+  .dropbtn {
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    color: black;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    /* background-color:white; */
+    color: maroon;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+}
+.options{
+  display: flex;
+  gap:20px;
+}
+
+.search img{
+    height:38px;
+    width: 38px;
+}
+.cart img{
+    height:38px;
+    width: 38px;
+}
+.explore-button button{
+  height:38px;
+  width: 150px;
+}
+  #content {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: calc(100vh - 50px); 
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    gap: 370px;
+  }
+
+  .inner-left{
+    margin-top: 180px;
+    margin-left: 150px;
+    width: 400px;
+  }
+  
+  .new{
+    color: white;
+    font-size: 15px;
+  }
+ .book-line{
+  color: white;
+  font-size: 50px;
+  width: 400px;
+  font-weight: 200px;
+ }
+  .discover-buttons button{
+    background-color: white;
+    border: none;
+    height: 50px;
+    width: 120px;
+  }
+  
+  .inner-right{
+    margin-top: 130px;
+    margin-right: 150px;
+    border: 1px solid white;
+    height: 400px;
+    width: 350px;
+    padding-left: 25px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+  }
+  .inner-right label{
+    font-size: 20px;
+  }
+  .inner-right select{
+    height: 40px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  .inner-right button{
+    height: 40px;
+    width: 300px;
+    background-color:rgb(156,15,54);
+    border: none;
+    color: white;
+  }
+  #main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: -1; 
+    transition: background-image 5s ease-in-out; 
+    background-image: url('images/default_image.jpg');
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+  }
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+#main {
+  position: relative;
+  width: 100vw;
+  height: 100vh; 
+  overflow: hidden; 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-image: url('path/to/images/default_image');
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+}
+
+#nav-bar {
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  width: 100%;
+  border-bottom: 2px solid white;
+  color: white; 
+  padding: 1rem;
+  box-sizing: border-box; 
+  transition: background-color 5s ease-in-out; 
+  display: flex;
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+  gap:180px;
+  /* justify-content: center; */
+}
+.logo img{
+  height: 45px;
+  width: 150px ;
+}
+.nav-items{
+  justify-content: center;
+}
+
+.dropbtn {
+  background-color: rgba(0, 0, 0, 0); 
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  color: black;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  /* background-color:white; */
+  color: maroon;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.options{
+display: flex;
+gap:20px;
+}
+
+.search-container img{
+  height:38px;
+  width: 38px;
+}
+.search-container input[type=text]{
+height: 30px;
+}
+.cart img{
+  height:38px;
+  width: 38px;
+}
+.login-button button{
+height:38px;
+width: 150px;
+}
+#content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: calc(100vh - 50px); 
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  gap: 370px;
+}
+
+.inner-left{
+  margin-top: 180px;
+  margin-left: 150px;
+  width: 400px;
+}
+
+.new{
+  color: white;
+  font-size: 15px;
+}
+.book-line{
+color: white;
+font-size: 50px;
+width: 400px;
+font-weight: 200px;
+}
+.discover-buttons button{
+  background-color: white;
+  border: none;
+  height: 50px;
+  width: 120px;
+}
+
+.inner-right{
+  margin-top: 130px;
+  margin-right: 150px;
+  border: 1px solid white;
+  height: 400px;
+  width: 350px;
+  padding-left: 25px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
+}
+.inner-right label{
+  font-size: 20px;
+}
+.inner-right select{
+  height: 40px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.inner-right button{
+  height: 40px;
+  width: 300px;
+  background-color:rgb(156,15,54);
+  border: none;
+  color: white;
+}
+#submissionMessage{
+  height: 200px;
+  width: 350px;
+  font-size: 20px;
+  text-align: center;
+}
+#submissionMessage p{
+  margin-top: 160px;
+  font-size: 35px;
+}
+#main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  z-index: -1; 
+  transition: background-image 5s ease-in-out; 
+  background-image: url('images/default_image.jpg');
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+}
+
+/* Styles for the popup */
+.popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color:rgba(0, 0, 0, 0.5); ;
+width: 50%;
+height: 50%;
+border: 1px solid #ccc;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+z-index: 9999; /* Ensure the popup appears on top of other content */
+display: none; /* Initially hidden */
+}
+
+/* Styles for the overlay */
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+z-index: 9998; /* Ensure the overlay appears below the popup */
+display: none; /* Initially hidden */
+}
+
+
+.form-container {
+width: 300px;
+margin: 0 auto;
+padding: 20px;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide the sign up form by default */
+#signupForm {
+display: none;
+}
+
+/* Styles for the tabs (Login/Sign Up links) */
+.tab {
+cursor: pointer;
+}
+
+/* Styles for active tab */
+.active {
+font-weight: bold;
+}
+  
