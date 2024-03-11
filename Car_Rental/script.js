@@ -153,6 +153,7 @@ document.getElementById('final-total').textContent=sum_total;
     document.getElementById('checkoutPage').style.display = 'block';
     document.getElementById('cars_page').style.display='none';
     document.getElementById('front').style.display='none';
+    document.getElementById('foote').style.display='none';
 }
 
 // function processPayment(event) {
@@ -169,5 +170,5 @@ function hide_checkout(){
   document.getElementById('checkoutPage').style.display = 'none';
   document.getElementById('front').style.display = 'block';
   document.getElementById('cars_page').style.display = 'block';
-  
+  document.getElementById('foote').style.display = 'block';
 }
